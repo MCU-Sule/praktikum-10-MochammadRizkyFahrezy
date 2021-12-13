@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Rizky Fahrezy 2172018">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>     
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<html>
+  <body>
+    <div id="circle"></div>
+  </body>
+</html>
+<style>
+    body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:red
+}
+div{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  height:15px;
+  width:15px;
+  border-radius:50%;
+  border:2px solid black;
+}
+</style>
+<script>
+    document.addEventListener('mousemove', function(e) {
+  let body = document.querySelector('body');
+  let circle = document.getElementById('circle');
+  let left = e.offsetX;
+  let top = e.offsetY;
+  circle.style.left = left + 'px';
+  circle.style.top = top + 'px';
+});
+</script>
